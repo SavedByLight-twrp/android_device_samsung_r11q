@@ -24,9 +24,9 @@ Minor checks
 - [x] poweroff
 - [x] battery level
 - [x] temperature
-- [ ] encrypted backups
-- [ ] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
-- [ ] USB mass storage export
+- [x] encrypted backups
+- [x] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device)
+- [x] USB mass storage export
 - [x] set brightness
 - [-] vibrate (TW_NO_HAPTICS)
 - [x] screenshot
