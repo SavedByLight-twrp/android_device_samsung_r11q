@@ -7,6 +7,6 @@
 
 export ALLOW_MISSING_DEPENDANCIES=true
 
-add_lunch_combo pb_r11q-user
-add_lunch_combo pb_r11q-userdebug
-add_lunch_combo pb_r11q-eng
+add_lunch_combo twrp_r11q-user
+add_lunch_combo twrp_r11q-userdebug
+add_lunch_combo twrp_r11q-eng

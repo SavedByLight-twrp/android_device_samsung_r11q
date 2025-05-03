@@ -170,3 +170,6 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # Treble
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
 PRODUCT_FULL_TREBLE := true
+
+# Gold Theme
+TWRP_NEW_THEME := false
