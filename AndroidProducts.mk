@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pb_r11q.mk
+    $(LOCAL_DIR)/twrp_r11q.mk
 
 COMMON_LUNCH_CHOICES := \
-    pb_r11q-user \
-    pb_r11q-userdebug \
-    pb_r11q-eng
+    twrp_r11q-user \
+    twrp_r11q-userdebug \
+    twrp_r11q-eng
