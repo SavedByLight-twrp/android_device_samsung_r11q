@@ -1,12 +1,10 @@
-#
-# Copyright (C) 2025 The Android Open Source Project
-# Copyright (C) 2025 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
+# Orangefox Flags
 export ALLOW_MISSING_DEPENDANCIES=true
-
-add_lunch_combo twrp_r11q-user
-add_lunch_combo twrp_r11q-userdebug
-add_lunch_combo twrp_r11q-eng
+export TARGET_ARCH=arm64
+export OF_FLASHLIGHT_ENABLE=1
+export OF_FL_PATH1=
+export FOX_VERSION="Stable 1"
+export OF_MAINTAINER="Maxim_N_Jamie"
+export TARGET_DEVICE_ALT="r11q"
+export OF_ENABLE_LPTOOLS=1
+export OF_USE_LEGACY_BATTERY_SERVICES=1
