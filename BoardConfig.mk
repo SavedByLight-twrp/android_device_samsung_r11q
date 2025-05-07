@@ -10,6 +10,10 @@ DEVICE_PATH := device/samsung/r11q
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
+# Treble
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
+PRODUCT_FULL_TREBLE := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -105,7 +109,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true 
 TW_INCLUDE_NTFS_3G := true 
 
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
@@ -123,6 +126,7 @@ PLATFORM_VERSION := 16.1.0
 BOARD_USES_METADATA_PARTITION := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
+TW_INCLUDE_CRYPTO := true
 
 # TWRP Configuration
 TW_EXTRA_LANGUAGES := true
@@ -165,10 +169,6 @@ TWRP_EVENT_LOGGING := true
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
-# Treble
-PRODUCT_ENFORCE_VINTF_MANIFEST := true
-PRODUCT_FULL_TREBLE := true
 
 # Gold Theme
 TWRP_NEW_THEME := false
