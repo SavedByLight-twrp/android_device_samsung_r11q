@@ -1,3 +1,6 @@
+on init
+    start vendor.keymint-default
+
 service vendor.keymint-default /system/bin/android.hardware.security.keymint-service
     class early_hal
     user root
