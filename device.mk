@@ -28,6 +28,9 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libdrmfs.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libsecureui.so
     
+# Keystore2
+PRODUCT_PACKAGES += \
+    android.system.keystore2
 
 # QCOM
 PRODUCT_PACKAGES += \
