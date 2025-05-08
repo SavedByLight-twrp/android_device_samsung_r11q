@@ -196,6 +196,20 @@
         <fqname>@1.0::IThermal/default</fqname>
         <fqname>@2.0::IThermal/default</fqname>
     </hal>
+    <hal format="aidl">
+        <name>android.system.keystore2</name>
+        <transport>hwbinder</transport>
+        <version>3</version>
+        <fqname>IKeystoreService/default</fqname>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.system.wifi.keystore</name>
+        <version>1.0</version>
+        <interface>
+            <name>IKeystore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="false">
         <name>android.hidl.manager</name>
         <transport>hwbinder</transport>
@@ -514,6 +528,14 @@
             <instance>imsrtpservice</instance>
         </interface>
         <fqname>@3.0::IRTPService/imsrtpservice</fqname>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.frameworks.security.ucm.crypto</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISehUcmKeystore</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.audio</name>
