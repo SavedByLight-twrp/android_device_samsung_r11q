@@ -199,11 +199,12 @@
     <hal format="aidl">
         <name>android.system.keystore2</name>
         <transport>hwbinder</transport>
-        <version>3</version>
+        <version>4</version>
         <fqname>IKeystoreService/default</fqname>
     </hal>
     <hal format="hidl" optional="false">
         <name>android.system.wifi.keystore</name>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IKeystore</name>
