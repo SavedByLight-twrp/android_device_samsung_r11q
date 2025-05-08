@@ -85,6 +85,23 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 
+# System as root
+BOARD_ROOT_EXTRA_FOLDERS := \
+	cache \
+	carrier \
+	data_mirror \
+	efs \
+	linkerconfig \
+	odm_dlkm \
+	oem \
+	optics \
+	postinstall \
+	prism \
+	second_stage_resources \
+	spu \
+	system_ext \
+	vendor_dlkm
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 105381888
