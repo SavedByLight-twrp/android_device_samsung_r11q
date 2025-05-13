@@ -1,10 +1,10 @@
 # Logical Partitions
-/system             erofs     system                                           flags=display="System EROFS";logical;backup=1
-/system             f2fs      system                                           flags=display="System F2FS";logical;backup=1
-/system             ext4      system                                           flags=display="System EXT";logical;backup=1
-/vendor             erofs     vendor                                           flags=display="Vendor";logical;backup=1
-/product            erofs     product                                          flags=display="Product";logical;backup=1
-/system_ext         erofs     system_ext                                       flags=display="system_ext";logical;backup=1
+/system             erofs     system                                           flags=display="System EROFS";logical;backup=1;flashimg
+/system             f2fs      system                                           flags=display="System F2FS";logical;backup=1;flashimg
+/system             ext4      system                                           flags=display="System EXT4";logical;backup=1;flashimg
+/vendor             erofs     vendor                                           flags=display="Vendor";logical;backup=1;flashimg
+/product            erofs     product                                          flags=display="Product";logical;backup=1;flashimg
+/system_ext         erofs     system_ext                                       flags=display="system_ext";logical;backup=1;flashimg
 /vendor_dlkm        erofs     vendor_dlkm                                      flags=display="vendor_dlkm";logical;backup=1
 
 # Physical Partitions
