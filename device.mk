@@ -18,13 +18,10 @@ PRODUCT_PACKAGES += \
 # Recovery modules/dependencies
 TARGET_RECOVERY_DEVICE_MODULES += \
     libopenaes \
-    libion \
-    libdmabufheap \
     libdrmfs \
+    libsecureui
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libopenaes.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libdmabufheap.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libdrmfs.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libsecureui.so
     
