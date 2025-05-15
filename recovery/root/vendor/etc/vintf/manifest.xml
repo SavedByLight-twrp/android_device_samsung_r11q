@@ -196,7 +196,7 @@
         <fqname>@1.0::IThermal/default</fqname>
         <fqname>@2.0::IThermal/default</fqname>
     </hal>
-    <hal format="aidl">
+    <hal format="hidl">
         <name>android.system.keystore2</name>
         <transport>hwbinder</transport>
         <version>3</version>
@@ -532,6 +532,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.frameworks.security.ucm.crypto</name>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>ISehUcmKeystore</name>
