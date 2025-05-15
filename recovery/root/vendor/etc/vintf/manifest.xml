@@ -196,10 +196,10 @@
         <fqname>@1.0::IThermal/default</fqname>
         <fqname>@2.0::IThermal/default</fqname>
     </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>android.system.keystore2</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>3</version>
         <fqname>IKeystoreService/default</fqname>
     </hal>
     <hal format="hidl" optional="false">
