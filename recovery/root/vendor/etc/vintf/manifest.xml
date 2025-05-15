@@ -199,7 +199,7 @@
     <hal format="hidl">
         <name>android.system.keystore2</name>
         <transport>hwbinder</transport>
-        <version>3</version>
+        <version>1.0</version>
         <fqname>IKeystoreService/default</fqname>
     </hal>
     <hal format="hidl" optional="false">
