@@ -19,11 +19,13 @@ PRODUCT_PACKAGES += \
 TARGET_RECOVERY_DEVICE_MODULES += \
     libopenaes \
     libdrmfs \
-    libsecureui
+    libsecureui \
+    libdmabufheap
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libopenaes.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libdrmfs.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libsecureui.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/libsecureui.so \
+     $(TARGET_OUT_SHARED_LIBRARIES)/libdmabufheap.so
     
 
 # QCOM
