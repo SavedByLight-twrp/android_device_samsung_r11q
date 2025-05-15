@@ -204,6 +204,7 @@
     </hal>
     <hal format="hidl" optional="false">
         <name>android.system.wifi.keystore</name>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IKeystore</name>
