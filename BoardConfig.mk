@@ -99,6 +99,17 @@ BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system system system vendor product odm system_ext vendor_dlkm
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
+ # Root
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    efs \
+    omr \
+    optics \
+    prism \
+    spu \
+    persist \
+    sec_efs
+
 # Recovery
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -130,6 +141,7 @@ BOARD_USES_METADATA_PARTITION := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
 
 # TWRP Configuration
 TW_EXTRA_LANGUAGES := true
@@ -168,6 +180,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 TWRP_EVENT_LOGGING := true
+TARGET_RECOVERY_DEVICE_MODULES += debuggerd
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT_EXECUTABLES)/debuggerd
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
