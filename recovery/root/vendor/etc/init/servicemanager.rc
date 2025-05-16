@@ -1,0 +1,12 @@
+on early-init
+	start servicemanager
+
+service servicemanager /system/bin/servicemanager
+    class core animation
+    user root
+    group root readproc
+    critical
+    file /dev/kmsg w
+    setprop servicemanager.ready true
+    task_profiles ServiceCapacityLow SystemServicePerformance ProcessCapacityHigh SystemServiceCapacityHigh
+    seclabel u:r:recovery:s0
