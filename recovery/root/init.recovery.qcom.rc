@@ -27,6 +27,10 @@
 import /init.recovery.qcom_decrypt.rc
 import /init.recovery.samsung.rc
 
+on early-init
+    mkdir /mnt/vendor/efs 0771 radio root
+    setprop ro.crypto.type file
+
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
     #setprop sys.usb.controller a600000.dwc3
