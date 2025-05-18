@@ -40,3 +40,16 @@ on property:ro.boot.usbcontroller=*
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+service keystore_auth /system/bin/keystore_auth
+    oneshot
+    user system
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keystore /system/bin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc
+    disabled
+    seclabel u:r:recovery:s0
