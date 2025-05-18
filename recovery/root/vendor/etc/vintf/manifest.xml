@@ -9,6 +9,8 @@
         face-default-sec.xml
         manifest.xml
         manifest.xml
+        manifest.xml
+        manifest.xml
         rkp_skeymint_v100_manifest.xml
         strongbox_km_v40_manifest.xml
         gatekeeper_manifest.xml
@@ -82,11 +84,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IGatekeeper/default</fqname>
-    </hal>
-    <hal override="true" format="hidl">
-        <name>android.hardware.health</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.1::IHealth/default</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.keymaster</name>
@@ -190,39 +187,32 @@
         </interface>
         <fqname>@1.1::IOffloadControl/default</fqname>
     </hal>
-    <hal override="true" format="hidl">
-        <name>android.hardware.thermal</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IThermal/default</fqname>
-        <fqname>@2.0::IThermal/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>android.system.keystore2</name>
-        <transport>hwbinder</transport>
-        <version>1</version>
-        <fqname>IKeystoreService/default</fqname>
-    </hal>
     <hal format="hidl" optional="false">
-        <name>android.system.wifi.keystore</name>
-        <transport>hwbinder</transport>
+        <name>android.hidl.allocator</name>
         <version>1.0</version>
         <interface>
-            <name>IKeystore</name>
-            <instance>default</instance>
+            <name>IAllocator</name>
+            <instance>ashmem</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="false">
         <name>android.hidl.manager</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
+        <version>1.0</version>
         <interface>
             <name>IServiceManager</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="false">
+        <name>android.hidl.memory</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMapper</name>
+            <instance>ashmem</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
         <name>android.hidl.token</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>ITokenManager</name>
@@ -530,15 +520,6 @@
         </interface>
         <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.frameworks.security.ucm.crypto</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehUcmKeystore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -588,6 +569,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.1::ISehBluetoothAudioProvidersFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.samsung.hardware.ifaa</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISehIfaa</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISehIfaa/default</fqname>
     </hal>
     <hal format="aidl">
         <name>vendor.samsung.hardware.keymint</name>
@@ -663,6 +654,16 @@
         <name>vendor.samsung.hardware.snap</name>
         <fqname>ISehSnap/default</fqname>
         <fqname>ISehSnap/secsnap</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.samsung.hardware.soter</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <interface>
+            <name>ISehSoter</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@3.0::ISehSoter/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.sysinput</name>
